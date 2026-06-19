@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SoporteBot</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="contenedor">
+
+    <!-- Panel lateral: muestra el estado FSM en tiempo real -->
+    <div class="panel-fsm">
+      <h3>Estado FSM</h3>
+
+      <div class="estado-item activo" data-estado="ESPERANDO_START">Esperando /start</div>
+      <div class="estado-item"        data-estado="SOLICITANDO_ID">Solicitando legajo</div>
+      <div class="estado-item"        data-estado="MENU_PRINCIPAL">Menú principal</div>
+      <div class="estado-item"        data-estado="PROCESANDO_SOLUCION">Procesando solución</div>
+      <div class="estado-item"        data-estado="DERIVANDO_TICKET">Derivando ticket</div>
+
+      <div class="estado-label">
+        Estado actual:
+        <span id="estado-actual">ESPERANDO_START</span>
+      </div>
+    </div>
+
+    <!-- Chat principal -->
+    <div class="chat">
+
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="avatar">🤖</div>
+          <div>
+            <h2>SoporteBot</h2>
+            <p>● En línea</p>
+          </div>
+        </div>
+        <button id="reset-btn">↺ Reiniciar</button>
+      </div>
+
+      <div id="mensajes"></div>
+
+      <div id="quick-replies"></div>
+
+      <div class="chat-footer">
+        <input id="user-input" type="text" placeholder="Escribí un mensaje..." autocomplete="off" />
+        <button id="send-btn">➤</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Primero la lógica, luego la interfaz -->
+  <script src="js/bot.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
