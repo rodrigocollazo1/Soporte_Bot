@@ -1,5 +1,4 @@
 // bot.js — LÓGICA PURA
-// Equivalente directo al código C# original.
 // No toca el DOM. Solo recibe input, devuelve respuesta.
 // ─────────────────────────────────────────────────────────
 
@@ -46,7 +45,7 @@ function generarTicket() {
 }
 
 // ─────────────────────────────────────────────────────────
-// Función principal: equivalente al switch del while(true)
+// Función principal
 // Recibe: string con el input del usuario
 // Devuelve: objeto { mensajes: [], estado: "", quickReplies: [] }
 // ─────────────────────────────────────────────────────────
