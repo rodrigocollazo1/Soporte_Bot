@@ -1,0 +1,21 @@
+{
+  "empleados": [
+    { "legajo": "1001", "nombre": "Ana García" },
+    { "legajo": "1002", "nombre": "Carlos López" },
+    { "legajo": "1003", "nombre": "María Torres" }
+  ],
+  "soluciones": {
+    "1": {
+      "categoria": "Problemas de Internet",
+      "texto": "Reinicie el módem desenchufándolo 30 segundos."
+    },
+    "2": {
+      "categoria": "Falla de Software",
+      "texto": "Abra el Administrador de Tareas y finalice el proceso colgado."
+    },
+    "3": {
+      "categoria": "Problemas de Hardware",
+      "texto": "Verifique que el cable HDMI esté correctamente ajustado."
+    }
+  }
+}
