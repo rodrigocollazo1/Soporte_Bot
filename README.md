@@ -84,5 +84,5 @@ Luego abrir el navegador en `http://localhost:8000`.
 
 ## 👤 Autores
 
-Rodrigo — Tecnicatura Universitaria en Programación a Distancia (UTN)
+Rodrigo Collazo y Daian Horst — Tecnicatura Universitaria en Programación a Distancia (UTN)
 Cátedra: Organización Empresarial
