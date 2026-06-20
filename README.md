@@ -19,7 +19,6 @@ El bot guía al usuario a través de 5 estados (Máquina de Estados Finita):
 4. **PROCESANDO_SOLUCION** — el bot sugiere una solución y pregunta si funcionó
 5. **DERIVANDO_TICKET** — si no se resolvió, genera un ticket para Nivel 2
 
-El diagrama BPMN 2.0 correspondiente se encuentra en `/docs/bpmn-to-be.png`.
 
 ---
 
