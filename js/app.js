@@ -14,6 +14,7 @@ const quickDiv     = document.getElementById("quick-replies");
 // ── Inicialización ───────────────────────────────────────
 window.addEventListener("DOMContentLoaded", async () => {
   await cargarDB();             // carga data/db.json en bot.js
+  actualizarEstado("ESPERANDO_START");
   agregarMensajeBot(
     "Escribí /start o hola para comenzar.",
     "normal"

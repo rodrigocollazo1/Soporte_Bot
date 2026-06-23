@@ -122,9 +122,12 @@ function procesarInput(userInput) {
         respuesta.tipo = "exito";
         estadoActual = EstadoBot.ESPERANDO_START;
       } else if (inp.toUpperCase() === "NO") {
+        // Entra al estado de derivación antes de generar el ticket
+        estadoActual = EstadoBot.DERIVANDO_TICKET;
         const ticket = generarTicket();
         respuesta.mensajes.push("Lamentamos que no funcione. Generando ticket para Nivel 2...");
         respuesta.mensajes.push(`Ticket N° ${ticket} creado con éxito. Un técnico te contactará pronto. ¡Gracias!`);
+        // El proceso queda cerrado: vuelve al estado de reposo
         estadoActual = EstadoBot.ESPERANDO_START;
       } else {
         respuesta.mensajes.push("[ERROR] Por favor respondé únicamente SI o NO:");

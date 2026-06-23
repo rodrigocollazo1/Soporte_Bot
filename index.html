@@ -9,33 +9,52 @@
 <body>
 
   <div class="contenedor">
-    <!-- Chat principal -->
-     <div class="chat-y-footer">
-      <div class="chat">
-      <div class="chat-header">
-        <div class="chat-header-info">
-          <div class="avatar">🤖</div>
-          <div>
-            <h2>SoporteBot</h2>
-            <p>● En línea</p>
+
+    <div class="contenido-principal">
+      
+      <!-- Panel de maquina de estados -->
+      <div class="panel-fsm">
+        <h3>Máquina de Estados</h3>
+        <div class="estado-item" data-estado="ESPERANDO_START">Esperando inicio</div>
+        <div class="estado-item" data-estado="SOLICITANDO_ID">Solicitando legajo</div>
+        <div class="estado-item" data-estado="MENU_PRINCIPAL">Menú principal</div>
+        <div class="estado-item" data-estado="PROCESANDO_SOLUCION">Procesando solución</div>
+        <div class="estado-item" data-estado="DERIVANDO_TICKET">Derivando ticket</div>
+
+        <div class="estado-label">
+          Estado actual:
+          <span id="estado-actual">ESPERANDO_START</span>
+        </div>
+      </div>
+      
+      <!-- Chat principal -->
+      <div class="chat-y-footer">
+        <div class="chat">
+          <div class="chat-header">
+            <div class="chat-header-info">
+              <div class="avatar">🤖</div>
+              <div>
+                <h2>SoporteBot</h2>
+                <p>● En línea</p>
+              </div>
+            </div>
+            <button id="reset-btn">↺ Reiniciar</button>
+          </div>
+
+          <div id="mensajes"></div>
+          <div id="quick-replies"></div>
+
+          <div class="chat-footer">
+            <input id="user-input" type="text" placeholder="Escribí un mensaje..." autocomplete="off" />
+            <button id="send-btn">➤</button>
           </div>
         </div>
-        <button id="reset-btn">↺ Reiniciar</button>
       </div>
+    
+    </div> <footer class="app-footer">
+      <h3>© Collazo Rodrigo - Daian Horst 2026 | Organización Empresarial - UTN</h3>
+    </footer>
 
-      <div id="mensajes"></div>
-
-      <div id="quick-replies"></div>
-
-      <div class="chat-footer">
-        <input id="user-input" type="text" placeholder="Escribí un mensaje..." autocomplete="off" />
-        <button id="send-btn">➤</button>
-      </div>
-    </div>
-      <footer class="app-footer">
-        <h3>© Collazo Rodrigo - Daian Horst 2026 | Organización Empresarial - UTN</h3>  
-      </footer>
-     </div>
   </div>
 
   <!-- Primero la lógica, luego la interfaz -->
