@@ -35,6 +35,7 @@ El sistema emula un canal de comunicación interna para empleados. Para interact
 
 El código fuente respeta rigurosamente el patrón de separación de responsabilidades:
 
+```text
 soporte_bot/
 ├── index.html         # Estructura e interfaces semánticas del Chat y el Panel FSM.
 ├── css/
@@ -43,7 +44,7 @@ soporte_bot/
 │   ├── bot.js         # LÓGICA PURA: Control de estados (switch-case), persistencia y validaciones.
 │   └── app.js         # INTERFAZ: Orquestador del DOM, eventos de teclado y pasaje de datos a bot.js.
 └── data/
-└── db.json        # Persistencia Estática: Archivo JSON con datos estructurados de empleados y soluciones.
+    └── db.json        # Persistencia Estática: Archivo JSON con datos estructurados de empleados y soluciones.
 
 ---
 
