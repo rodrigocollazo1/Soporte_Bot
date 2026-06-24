@@ -45,6 +45,7 @@ soporte_bot/
 │   └── app.js         # INTERFAZ: Orquestador del DOM, eventos de teclado y pasaje de datos a bot.js.
 └── data/
     └── db.json        # Persistencia Estática: Archivo JSON con datos estructurados de empleados y soluciones.
+```
 
 ---
 
