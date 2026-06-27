@@ -125,6 +125,13 @@ function procesarInput(userInput) {
         // Entra al estado de derivación antes de generar el ticket
         estadoActual = EstadoBot.DERIVANDO_TICKET;
         const ticket = generarTicket();
+        const registro = {
+          id_ticket: ticket,
+          id_legajo: opcionSeleccionada ? opcionSeleccionada : "N/A",
+          id_categoria: opcionSeleccionada,
+          estado_ticket: "Abierto",
+          fecha_creacion: new Date().toISOString()
+        };
         respuesta.mensajes.push("Lamentamos que no funcione. Generando ticket para Nivel 2...");
         respuesta.mensajes.push(`Ticket N° ${ticket} creado con éxito. Un técnico te contactará pronto. ¡Gracias!`);
         // El proceso queda cerrado: vuelve al estado de reposo
